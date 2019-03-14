@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg@400x700.jpg);
+    background-size: cover;
+}
+
+header{
+}
+
+.title{
+    font-family: 'Chiller';
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#menu{
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    font-size: 2.3rem;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-box{
+    position: fixed;
+    top: 0;
+    right: -70%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgb(255, 234, 228);
+    transition: 0.2s;
+}
+
+.bort-med-meny{
+    width: 30%;
+    height: 100%;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.activate{
+    visibility: visible;
+    right: 0;
+}
+
+.menu-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Chiller';
+    font-size: 2rem;
+}
+
+.menu-text:nth-child(1){
+    margin-top: 90px;
+}
+
+.player{
+    position: fixed;
+    bottom: 0;
+}
+
+.shop-button{
+    position: fixed;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: lightsalmon;
+    border-radius: 40px;
+}
+
+.shop-button p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
