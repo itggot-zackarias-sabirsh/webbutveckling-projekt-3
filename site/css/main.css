@@ -10,17 +10,16 @@ body{
 
 .bg{
     background-image: url(../img/bg@400x700.jpg);
-    width: calc(100vw - 30px);
-    margin: 15px;
-    margin-top: 15%;
+    height: 100vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 header{
+    margin-top: 0;
     width: 100%;
-    position: absolute;
-    top: 0px;
     z-index: 10;
 }
 
@@ -51,17 +50,15 @@ main{
 .menu-box{
     opacity: 0;
     position: absolute;
-    top: 8%;
+    top: 10%;
     width: 100%;
     height: 20%;
     transition: 0.5s;
 }
 
 .menu-box-shop{
-
     position: absolute;
-    top: 11%;
-    z-index: -10;
+    top: 10%;
 }
 
 /*.bort-med-meny{
@@ -83,27 +80,6 @@ main{
     margin: 0;
 }
 
-/*.menu-text::before{
-    margin-top: 20px;
-    margin-right: 10px;
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: black;
-}
-
-.menu-text::after{
-    margin-top: 20px;
-    margin-left: 10px;
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: black;
-}*/
-
-
 
 .activate-index{
     opacity: 1;
@@ -119,12 +95,14 @@ main{
     top: 10%;
     font-size: 1.3rem;
     opacity: 1;
-    transition: 0.6s ease-out;
+    transition: 0.2s;
+    left: 28%;
 }
 
 .activate-slogan{
-    top: 25%;
-    opacity: 0;
+    justify-content: flex-start;
+    top: 20%;
+    transform: rotateX(90deg);
 }
 
 .shop-button{
@@ -162,14 +140,15 @@ main{
 }
 
 aside{
-    margin: 15% 15px 0 15px;
+    position: relative;
+    margin: 0 4vw 4vw 4vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-image: linear-gradient(rgb(255, 216, 164), rgb(255, 150, 80));
     transition: 0.5s;
     padding-bottom: 25px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 aside p{
@@ -183,7 +162,7 @@ aside p{
 
 aside h1{
     width: 100%;
-    margin: 0;
+    margin-top: 0;
     color: white;
     margin-left: calc(5vw - 5px);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
@@ -191,7 +170,7 @@ aside h1{
 }
 
 .activate-aside{
-    margin-top: 50%;
+    margin-top: 30%;
 }
 
 .shirt-container{
@@ -204,6 +183,14 @@ aside h1{
     background-size: contain;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.shirt-container:nth-child(4){
+    margin-top: 2%;
+}
+
+.shirt-container:nth-child(5){
+    margin-top: 2%;
 }
 
 .shirt-name{
@@ -247,7 +234,7 @@ aside h1{
     background-color: rgb(255, 255, 255);
     display: block;
     justify-content: center;
-    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.15);
 }
 
 .image-container{
@@ -278,8 +265,99 @@ aside h1{
 .activate-shirt-info{
     visibility: visible;
 }
-footer{
-    height: 25vh;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
+
+.cart-container{
+    margin-top: 10px;
+    background-color: #fff;
+    width: 90%;
+    border-radius: 5px;
 }
+
+.area{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.area p{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.area p:last-child{
+    margin-left: 60%;
+}
+
+.area:nth-child(even){
+    background-color: rgb(236, 236, 236);
+    width: calc(100% - 20px)
+}
+
+.area:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.area:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.order-button{
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+article{
+    margin: 4vw;
+    height: 50vh;
+    background-color: rgb(255, 142, 122);
+    background-image: url(../img/wise-words@400x400.png);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: rgb(255, 78, 78); */
+}
+
+footer{
+    margin: 4vw;
+    margin-top: 0;
+    padding-bottom: 10px;
+    background-image: linear-gradient(rgb(255, 243, 230) 50%, rgb(255, 224, 195));
+}
+
+.stripe{
+    height: 1px;
+    width: 100vw;
+    background-color: gray;
+}
+
+footer h1, h2, p, .email{
+    margin: 0 0 0 4vw;
+    color: rgb(53, 53, 53);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer h2{
+    font-size: 1.2em;
+    margin-top: 6%;
+}
+
+.email{
+    margin-top: 10px;
+    width: 88%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
