@@ -1,22 +1,35 @@
 body{
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 200vh; */
 }
 
 .wrapper{
-    width: 100%;
-    height: 100%;
+    z-index: -20;
+}
+
+.bg{
     background-image: url(../img/bg@400x700.jpg);
+    width: calc(100vw - 30px);
+    margin: 15px;
+    margin-top: 15%;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
 }
 
 .title{
+    color: black;
+    text-decoration: none;
+    z-index: 10;
     font-family: 'Chiller';
-    font-size: 4rem;
+    font-size: 3.2rem;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -24,8 +37,8 @@ header{
 
 #menu{
     position: absolute;
-    right: 15px;
-    top: 23px;
+    right: 12px;
+    top: 15px;
     font-size: 2.3rem;
 }
 
@@ -36,59 +49,100 @@ main{
 }
 
 .menu-box{
-    position: fixed;
-    top: 0;
-    right: -70%;
-    width: 70%;
-    height: 100vh;
-    background-color: rgb(255, 234, 228);
-    transition: 0.2s;
+    opacity: 0;
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 20%;
+    transition: 0.5s;
 }
 
-.bort-med-meny{
-    width: 30%;
-    height: 100%;
+.menu-box-shop{
+
+    position: absolute;
+    top: 11%;
+    z-index: -10;
+}
+
+/*.bort-med-meny{
+    width: 100%;
+    height: 00%;
     visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
-}
-
-.activate{
-    visibility: visible;
-    right: 0;
-}
+}*/
 
 .menu-text{
+    color: black;
+    text-decoration: none;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     font-family: 'Chiller';
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0;
 }
 
-.menu-text:nth-child(1){
-    margin-top: 90px;
+/*.menu-text::before{
+    margin-top: 20px;
+    margin-right: 10px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
 }
 
-.player{
-    position: fixed;
-    bottom: 0;
+.menu-text::after{
+    margin-top: 20px;
+    margin-left: 10px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+}*/
+
+
+
+.activate-index{
+    opacity: 1;
+}
+
+.slogan{
+    text-align: center;
+    color: rgb(22, 22, 22);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    font-size: 1.3rem;
+    opacity: 1;
+    transition: 0.6s ease-out;
+}
+
+.activate-slogan{
+    top: 25%;
+    opacity: 0;
 }
 
 .shop-button{
-    position: fixed;
+    position: absolute;
     top: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 50px;
-    background-color: lightsalmon;
+    background-color: rgb(255, 179, 148);
     border-radius: 40px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.3);
 }
 
-.shop-button p{
+.shop-button a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,4 +150,136 @@ main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+.shirt-ad{
+    display: flex;
+    background-image: url(../img/tröja1@400x500.jpg);
+    width: 100%;
+    height: 75vh;
+}
+
+aside{
+    margin: 15% 15px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: linear-gradient(rgb(255, 216, 164), rgb(255, 150, 80));
+    transition: 0.5s;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+aside p{
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: calc(5vw - 5px);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+aside h1{
+    width: 100%;
+    margin: 0;
+    color: white;
+    margin-left: calc(5vw - 5px);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+
+}
+
+.activate-aside{
+    margin-top: 50%;
+}
+
+.shirt-container{
+    width: 40vw;
+    height: 40vw;
+    margin: calc(5vw - 10px);
+    margin-top: 8%;
+    background-color: white;
+    background-image: url(../img/tröja1@200x200.png); 
+    background-size: contain;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.shirt-name{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    margin-top:39vw;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.shirt-name::before{
+    margin-top: 7px;
+    margin-right: 10px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.shirt-name::after{
+    margin-top: 7px;
+    margin-left: 10px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.shirt-info{
+    visibility: hidden;
+    border-radius: 5px;
+    position: absolute;
+    width: 85vw;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    justify-content: center;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.75);
+}
+
+.image-container{
+    width: 85vw;
+    height: 80vw;
+    background-image: url(../img/tröja1@400x400.png);
+    background-size: 300px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.shirt-info i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.activate-shirt-info{
+    visibility: visible;
+}
+footer{
+    height: 25vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
