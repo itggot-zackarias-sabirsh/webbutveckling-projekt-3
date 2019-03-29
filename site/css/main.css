@@ -1,20 +1,20 @@
 body{
     margin: 0;
-    width: 100vw;
-    /* height: 200vh; */
 }
 
-.wrapper{
-    z-index: -20;
-}
 
 .bg{
     background-image: url(../img/bg@400x700.jpg);
     height: 100vh;
     margin-left: 4vw;
     margin-right: 4vw;
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 10;
 }
 
 header{
@@ -34,6 +34,10 @@ header{
     margin: 0;
 }
 
+.title-desktop{
+    visibility: hidden;
+}
+
 #menu{
     position: absolute;
     right: 12px;
@@ -48,17 +52,10 @@ main{
 }
 
 .menu-box{
-    opacity: 0;
     position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 20%;
+    top: 9.5%;
     transition: 0.5s;
-}
-
-.menu-box-shop{
-    position: absolute;
-    top: 10%;
+    z-index: 5;
 }
 
 /*.bort-med-meny{
@@ -73,16 +70,9 @@ main{
 .menu-text{
     color: black;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
     font-family: 'Chiller';
     font-size: 1.8rem;
     margin: 0;
-}
-
-
-.activate-index{
-    opacity: 1;
 }
 
 .slogan{
@@ -95,14 +85,8 @@ main{
     top: 10%;
     font-size: 1.3rem;
     opacity: 1;
-    transition: 0.2s;
+    transition: 0.5s;
     left: 28%;
-}
-
-.activate-slogan{
-    justify-content: flex-start;
-    top: 20%;
-    transform: rotateX(90deg);
 }
 
 .shop-button{
@@ -118,6 +102,11 @@ main{
     animation-name: blink;
     animation-iteration-count: infinite;
     box-shadow: 0px 6px 22px 0px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+.shop-button:last-child{
+    visibility: hidden;
 }
 
 .shop-button a{
@@ -129,14 +118,12 @@ main{
     font-weight: 400;
     font-size: 1.3rem;
     text-decoration: none;
+    font-weight: bold;
 }
 
 
 .shirt-ad{
-    display: flex;
-    background-image: url(../img/tröja1@400x500.jpg);
-    width: 100%;
-    height: 75vh;
+    visibility: hidden;
 }
 
 aside{
@@ -149,6 +136,7 @@ aside{
     transition: 0.5s;
     padding-bottom: 25px;
     padding-top: 5px;
+    z-index: 10;
 }
 
 aside p{
@@ -170,7 +158,7 @@ aside h1{
 }
 
 .activate-aside{
-    margin-top: 30%;
+    margin-top: 10%;
 }
 
 .shirt-container{
@@ -250,6 +238,17 @@ aside h1{
     position: absolute;
     top: 5px;
     right: 5px;
+}
+
+.add{
+    background-color: lightsalmon;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 40%;
+    margin: 20% 30% 0 30%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .price{
@@ -332,7 +331,7 @@ footer{
     margin: 4vw;
     margin-top: 0;
     padding-bottom: 10px;
-    background-image: linear-gradient(rgb(255, 243, 230) 50%, rgb(255, 224, 195));
+    background-image: linear-gradient(rgb(255, 205, 164) 50%, rgb(255, 185, 119));
 }
 
 .stripe{
@@ -356,8 +355,114 @@ footer h2{
     margin-top: 10px;
     width: 88%;
     background-color: white;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 5px; 
 }
 
+@media screen and (min-width: 500px) {
 
+    #menu{
+        visibility: hidden;
+    }
+
+    header{
+        visibility: hidden;
+    }
+    
+
+    .title{
+        visibility: hidden;
+    }
+
+    .slogan{
+        visibility: hidden;
+    }
+
+    .title-desktop{
+        position: absolute;
+        right: 40%;
+        visibility: visible;
+        margin-top: -35px;
+        font-size: 5rem;
+    }
+
+
+    .bg{
+        position: relative;
+        transform: translateY(-10%);
+        z-index: 0;
+        height: 120vh;
+        margin: 0;
+        background-image: url(../img/bg\ edited2-1280x800.jpg);
+    }
+
+    .menu-box{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        top: 2%;
+    }
+
+
+    .shop-button{
+        background-color: rgb(255, 142, 122);
+        border-radius: 0;
+        border: 2px black solid;
+        z-index: 2;
+    }
+
+
+    .shop-button a{
+        color: black;
+        font-weight: bold;
+
+    }
+    .shop-button:last-child{
+        visibility: visible;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    .shop-button:hover + .shop-button:last-child{ 
+        transform: translate(-10px, -10px);
+    }
+
+    .shirt-container, .shirt-container:nth-child(4), .shirt-container:nth-child(5){
+        width: 20vw;
+        height: 20vw;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .shirt-name{
+        visibility: hidden;
+    }
+
+    .misc-container{
+        display: flex;
+        margin-top: -6%;
+    }
+
+    article{
+        margin: 0;
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .shirt-ad{
+        visibility: visible;
+        display: flex;
+        background-color: rgb(255, 142, 122);
+        background-image: url(../img/tröja1@400x500.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    
+    footer{
+        margin: 0;
+        background-image: linear-gradient(rgb(255, 142, 122), rgb(255, 175, 122));
+    }
+  }
